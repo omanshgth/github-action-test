@@ -3,7 +3,7 @@ name: Decrypt Env Variable
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   decrypt:
