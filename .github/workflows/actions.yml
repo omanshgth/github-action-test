@@ -18,7 +18,7 @@ jobs:
       - name: List all Files
         run:  |
           pwd
-          ls -lrt
+          ls -lart
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
