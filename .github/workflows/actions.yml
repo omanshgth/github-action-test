@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - 'feature_*'
   # schedule:
   #   - cron: "0/5 * * * *"
   # push:
