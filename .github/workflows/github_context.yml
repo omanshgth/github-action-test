@@ -3,7 +3,7 @@ name: Guithub context
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   run-github-context:
@@ -13,6 +13,7 @@ jobs:
       - name: Dump GitHub context
         id: github_context_step
         run: echo '${{ toJSON(github) }}'
+        continue-on-error:  true
       - name: Dump job context
         if: always()
         run: echo '${{ toJSON(job) }}'
@@ -28,6 +29,7 @@ jobs:
   
   functions:
     runs-on:  ubuntu-latest
+    timeout-minutes:  2
     steps:
       - name: functions test
         run:  |
@@ -35,3 +37,4 @@ jobs:
           echo ${{ startsWith('hello', 'he') }}
           echo ${{ endsWith('hello', 'lo') }}
           echo ${{ format('Hello {0} {1} {2}', 'World','!','!') }}
+        timeout-minutes:  2
