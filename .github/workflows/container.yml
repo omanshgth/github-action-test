@@ -15,4 +15,14 @@ jobs:
         run:  |
           node -v
           cat /etc/os-release
-          
+  run-shell-script-in-container:
+    runs-on:  ubuntu-latest
+    steps:
+      - name:  Checkout the repo content
+        uses: actions/checkout@v1
+      - name: Execute shell Script  
+        uses: docker://node:latest
+        with:
+          entrypoint: ./script.sh
+
+
