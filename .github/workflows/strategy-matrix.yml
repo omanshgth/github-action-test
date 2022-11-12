@@ -3,7 +3,7 @@ name: Strategy Demonstration
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   node-version:

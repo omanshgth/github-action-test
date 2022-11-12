@@ -1,0 +1,18 @@
+name: Container Demonstration
+
+on: 
+  push:
+    branches:
+      - develop
+
+jobs:
+  node-docker:
+    runs-on:  ubuntu-latest
+    container:
+      image:  node:latest
+    steps:
+      - name: Log Node Version
+        run:  |
+          node -v
+          cat /etc/os-release
+          
