@@ -24,6 +24,8 @@ jobs:
           import platform
           print(platform.processor())
         shell:  python
+      - name: Print Secret
+        run: echo ${{ secrets.SecretKey }}
       
   run-windows-command:
     runs-on:  windows-latest
@@ -34,5 +36,4 @@ jobs:
       - name: Directory Bash
         run:  pwd
         shell: bash
-      - name: Print Secret
-        run: echo ${{ secrets.SecretKey }}
+      
