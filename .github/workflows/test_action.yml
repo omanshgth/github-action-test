@@ -16,3 +16,5 @@ jobs:
          SSH_KEY: ${{ secrets.SECRETKEY }}
         run: |
           echo ${{ secrets.SECRETKEY }}
+          echo ${{ secrets.SECRETKEY }}
+          echo ${{ secrets.SECRETKEY }}
