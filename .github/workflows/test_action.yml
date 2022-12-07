@@ -12,4 +12,8 @@ jobs:
       - name: echo a string
         run: echo "Hello World"
       - name: echo the secret value
-        run: echo ${{ secrets.SECRETKEY }}
+        env:
+         SSH_KEY: ${{ secrets.SECRETKEY }}
+        run: |
+          echo ${{ secrets.SECRETKEY }}
+          echo $SSH_KEY
