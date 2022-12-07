@@ -14,7 +14,5 @@ jobs:
       - name: echo the secret value
         env:
          SSH_KEY: ${{ secrets.SECRETKEY }}
-         SSH_KEY_TEST: ${{ secrets.test }}
         run: |
           echo ${{ secrets.SECRETKEY }}
-          echo $SSH_KEY
