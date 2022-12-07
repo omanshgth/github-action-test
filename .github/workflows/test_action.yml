@@ -1,0 +1,15 @@
+name: Shell Commands
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+      - name: echo the secret value
+        run: echo ${{ secrets.SECRETKEY }}
