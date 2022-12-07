@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: echo a string
         run: echo "Hello World"
+      - name: echo the secret value
+        run: echo ${{ secrets.SECRETKEY }}
       - name: multiline script
         run:  |
           node -v
